@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Forever Summer — Website Redesign: Before &amp; After</title>
-<meta name="description" content="Before-and-after presentation of the Forever Summer website redesign: what the research found, what changed, and why.">
+<title>Forever Summer Website Redesign: Before &amp; After</title>
+<meta name="description" content="Before and after look at the Forever Summer website redesign: what we found, what changed, and why.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23FCF3E0'/%3E%3Cpath d='M7 23a9 9 0 0 1 18 0Z' fill='%23E8890C'/%3E%3Cpath d='M10 23a6 6 0 0 1 12 0Z' fill='%23C42B48'/%3E%3Crect x='4' y='23' width='24' height='2.4' rx='1.2' fill='%23274060'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,9 +14,8 @@
 :root{
   --cream-50:#FFFBF2; --cream-100:#FCF3E0; --cream-200:#F6E7C8; --cream-300:#EBD5A8;
   --ink-900:#221709; --ink-600:#5C4A31; --ink-500:#6E5C43;
-  --amber-100:#FCE4BB; --amber-200:#F8CE8A; --amber-400:#EA9C2D; --amber-500:#E8890C;
-  --amber-700:#9A5804; --amber-800:#7A4503;
-  --dusk-700:#274060; --dusk-800:#1D3049; --dusk-900:#152337;
+  --amber-200:#F8CE8A; --amber-400:#EA9C2D; --amber-500:#E8890C; --amber-700:#9A5804;
+  --dusk-700:#274060; --dusk-800:#1D3049;
   --hib-600:#C42B48;
   --display:"Fraunces",Georgia,serif; --body:"Karla",system-ui,sans-serif;
   --wrap:66rem;
@@ -25,12 +24,12 @@
 html{scroll-snap-type:y proximity}
 body{margin:0;font-family:var(--body);color:var(--ink-900);background:var(--cream-50);
   line-height:1.6;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.1;margin:0 0 1rem}
+h1,h2{font-family:var(--display);font-weight:600;line-height:1.1;margin:0 0 1rem}
 h1{font-size:clamp(2.6rem,6.5vw,4.5rem)}
 h2{font-size:clamp(1.9rem,4vw,3rem)}
-h3{font-size:1.4rem}
 p{margin:0 0 .9rem;max-width:60ch}
 a{color:var(--dusk-700)}
+img{max-width:100%;height:auto;display:block}
 :focus-visible{outline:3px solid var(--amber-500);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .slide{min-height:100svh;display:flex;align-items:center;scroll-snap-align:start;
@@ -40,45 +39,40 @@ a{color:var(--dusk-700)}
   color:var(--amber-700);margin:0 0 .9rem}
 .on-dark .eyebrow{color:var(--amber-200)}
 .slide.dusk{background:var(--dusk-800);color:var(--cream-50)}
-.slide.dusk h1,.slide.dusk h2,.slide.dusk h3{color:var(--cream-50)}
+.slide.dusk h1,.slide.dusk h2{color:var(--cream-50)}
 .slide.cream{background:var(--cream-100)}
 .lede{font-size:1.2rem;color:var(--ink-600);max-width:56ch}
 .on-dark .lede{color:var(--cream-200)}
 .kicker{font-family:var(--display);font-style:italic;color:var(--amber-700)}
 .slide.dusk .kicker{color:var(--amber-200)}
 
-.ba{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;align-items:stretch}
-.panel{border-radius:16px;padding:1.25rem;position:relative}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;align-items:start}
+.panel{border-radius:16px;padding:1.1rem;position:relative}
 .panel .tag{position:absolute;top:-0.8rem;left:1rem;font-size:.72rem;font-weight:700;
   letter-spacing:.12em;text-transform:uppercase;padding:.2rem .8rem;border-radius:999px}
 .panel.before{background:#EFEBE2;border:1px solid #D4CDBE;filter:grayscale(1)}
 .panel.before .tag{background:#5F584A;color:#F5F1E8}
 .panel.after{background:#fff;border:1px solid var(--cream-300);box-shadow:0 2px 5px rgba(34,23,9,.12),0 12px 30px rgba(34,23,9,.10)}
 .panel.after .tag{background:var(--hib-600);color:#FFF7F0}
-.panel .note{font-size:.8125rem;color:var(--ink-500);margin:.8rem 0 0}
-.mock{border-radius:10px;overflow:hidden;border:1px solid rgba(34,23,9,.14);background:#fff;font-size:.68rem}
+.panel .note{font-size:.8125rem;color:var(--ink-500);margin:.7rem 0 0}
+.shot{border:1px solid var(--cream-300);border-radius:10px;overflow:hidden}
+.mock{border-radius:10px;overflow:hidden;border:1px solid rgba(34,23,9,.14);background:#fff}
 .m-head{display:flex;align-items:center;gap:.5rem;padding:.45rem .6rem;border-bottom:1px solid rgba(34,23,9,.1)}
-.m-dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--amber-500);flex:none}
+.m-dot{width:.55rem;height:.55rem;border-radius:50%;background:#8B8479;flex:none}
 .m-nav{margin-left:auto;display:flex;gap:.35rem}
 .m-nav i{display:block;width:1.6rem;height:.35rem;border-radius:999px;background:rgba(34,23,9,.18)}
-.m-cta{width:2.6rem;height:.7rem;border-radius:999px;background:var(--hib-600)}
 .m-body{padding:.7rem .6rem}
-.m-h{height:.7rem;border-radius:2px;background:rgba(34,23,9,.75);width:70%;margin-bottom:.4rem}
+.m-h{height:.7rem;border-radius:2px;background:rgba(34,23,9,.7);width:50%;margin-bottom:.45rem}
 .m-t{height:.35rem;border-radius:2px;background:rgba(34,23,9,.22);margin-bottom:.28rem}
 .m-t.short{width:55%}
-.m-marq{margin:.5rem -.6rem;padding:.4rem .6rem;background:var(--dusk-800);display:flex;gap:.5rem}
-.m-marq i{display:block;width:3rem;height:.32rem;border-radius:2px;background:rgba(255,255,255,.5)}
-.m-row{display:flex;gap:.4rem;margin-top:.5rem}
-.m-ticket{flex:1;height:2.4rem;border-radius:8px;background:var(--cream-100);border:1.5px dashed var(--amber-400)}
-.m-sun{display:flex;justify-content:center;padding:.3rem 0 0}
-.m-label{font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--ink-500);margin:.45rem 0 .2rem}
-.panel.before .m-marq{background:#8B8479}
-.panel.before .m-cta,.panel.before .m-dot{background:#8B8479}
-.panel.before .m-ticket{border-color:#A9A395;background:#E7E2D7}
+
+.gallery{display:grid;grid-template-columns:2fr 2fr 1fr;gap:1rem;margin-top:1.5rem;align-items:start}
+.gallery figure{margin:0}
+.gallery figcaption{font-size:.8125rem;color:var(--ink-500);margin-top:.4rem}
+@media (max-width:52em){.gallery{grid-template-columns:1fr 1fr}}
 
 .changes{list-style:none;margin:1.25rem 0 0;padding:0;display:grid;gap:1rem}
-.changes li{display:grid;grid-template-columns:minmax(9rem,14rem) 1fr;gap:1rem;
+.changes li{display:grid;grid-template-columns:minmax(9rem,13rem) 1fr;gap:1rem;
   border-top:1px solid var(--cream-300);padding-top:1rem;align-items:baseline}
 .slide.dusk .changes li{border-top-color:rgba(255,255,255,.22)}
 .changes b{font-family:var(--display);font-size:1.25rem;font-weight:600}
@@ -86,7 +80,6 @@ a{color:var(--dusk-700)}
 .slide.dusk .changes p{color:var(--cream-200)}
 .why{display:block;font-size:.8125rem;font-weight:700;color:var(--hib-600);margin-top:.25rem}
 .slide.dusk .why{color:#F3A9B8}
-
 .chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
 .chip{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--cream-300);
   border-radius:999px;background:#fff;padding:.4rem .8rem;font-size:.8125rem}
@@ -108,8 +101,8 @@ a{color:var(--dusk-700)}
   <div class="wrap">
     <p class="eyebrow">Website redesign · The Paseo, Camana Bay</p>
     <h1>Forever Summer,<br><span class="kicker">before &amp; after.</span></h1>
-    <p class="lede">The shop's whole magic is a weekly limited drop — and the old website
-    never mentioned it. Here's what the research found, what changed, and why.</p>
+    <p class="lede">The shop's whole magic is a weekly drop of new styles. The old website
+    never mentioned it. Here's what we changed, and why.</p>
     <p class="src">Live site: <a style="color:#fff" href="https://foundrylabsky.github.io/forever-summer-website/">foundrylabsky.github.io/forever-summer-website</a></p>
   </div>
 </section>
@@ -118,121 +111,111 @@ a{color:var(--dusk-700)}
   <div class="wrap">
     <p class="eyebrow">Where we started</p>
     <h2>Two pages, and the best story untold.</h2>
-    <p class="lede">The audit of foreversummer.com and the shop's public footprint found:</p>
     <ul class="changes">
-      <li><b>A near-empty site</b><p>Only a home page and an "FS Girls" page were live. No shop tour, no story, no way to act.</p></li>
-      <li><b>The drop was invisible</b><p>New styles arrive weekly in strictly limited quantities — the shop's defining mechanic lived only on Instagram, never on its own site.</p></li>
-      <li><b>The wrong address story</b><p>The site said "45 Market St, George Town" — technically true, but shoppers search for <em>Camana Bay</em>, and the landmark ("next to Starbucks") appeared nowhere.</p></li>
-      <li><b>Mixed service signals</b><p>Reviews included a glowing staff shout-out and separate complaints about fitting-room service. The site took no position.</p></li>
-      <li><b>Identity drift</b><p>Hours conflicting between sources (10–6 vs 10–7); the Facebook page named "ForeverSummer.com" instead of the brand.</p></li>
+      <li><b>A near-empty site</b><p>Just a home page and an FS Girls page. No story, nothing to do.</p></li>
+      <li><b>The drop was invisible</b><p>New styles land weekly in small numbers. That only lived on Instagram.</p></li>
+      <li><b>The wrong address story</b><p>The site said "George Town." Shoppers search for Camana Bay, next to Starbucks.</p></li>
+      <li><b>Mixed signals on service</b><p>One review praises the staff. Others complain about the fitting rooms. The site said nothing.</p></li>
     </ul>
-    <p class="src">Every finding is cited in <a href="https://github.com/FoundryLabsKy/forever-summer-website/blob/main/AUDIT-forever-summer.md">AUDIT-forever-summer.md</a>.</p>
+    <p class="src">Sources for every finding: <a href="https://github.com/FoundryLabsKy/forever-summer-website/blob/main/AUDIT-forever-summer.md">the research audit</a>.</p>
   </div>
 </section>
 
-<section class="slide cream" aria-label="Before and after — home page">
+<section class="slide cream" aria-label="Before and after">
   <div class="wrap">
     <p class="eyebrow">Side by side</p>
-    <h2>The home page, rebuilt around the drop.</h2>
+    <h2>Before and after.</h2>
     <div class="ba">
       <div class="panel before">
         <span class="tag">Before</span>
-        <p class="m-label">Representative wireframe, from the audit</p>
-        <div class="mock" role="img" aria-label="Wireframe of the old site: a single sparse page with a heading, a line of text and one link.">
+        <div class="mock" role="img" aria-label="Sketch of the old site: one sparse page with a heading, a short line of text and a single link.">
           <div class="m-head"><span class="m-dot"></span><span class="m-nav"><i></i></span></div>
           <div class="m-body">
-            <div class="m-h" style="width:50%"></div>
+            <div class="m-h"></div>
             <div class="m-t"></div><div class="m-t short"></div>
             <div style="height:2.2rem"></div>
             <div class="m-t" style="width:30%"></div>
           </div>
         </div>
-        <p class="note">One thin page + FS Girls; no drop story, no visit info beyond a
-        bare address line, no reason to come back next week.</p>
+        <p class="note">Sketch based on the audit. One thin page, a bare address line,
+        and no reason to come back next week.</p>
       </div>
       <div class="panel after">
         <span class="tag">After</span>
-        <p class="m-label">The shipped home page</p>
-        <div class="mock" role="img" aria-label="Mockup of the new site: sunset-arc hero, dark marquee strip, three dashed drop tickets, and one pill call to action.">
-          <div class="m-head"><span class="m-dot"></span><span class="m-nav"><i></i><i></i><i></i></span><span class="m-cta"></span></div>
-          <div class="m-body">
-            <div class="m-h">That long-summer feeling, on a hanger.</div>
-            <div class="m-t short"></div>
-            <div class="m-sun" aria-hidden="true"><svg width="90" height="34" viewBox="0 0 90 34"><path d="M5 32a40 40 0 0 1 80 0Z" fill="#F8CE8A"/><path d="M17 32a28 28 0 0 1 56 0Z" fill="#EA9C2D"/><path d="M28 32a17 17 0 0 1 34 0Z" fill="#C42B48"/><path d="M37 32a8 8 0 0 1 16 0Z" fill="#274060"/><rect x="2" y="31" width="86" height="2.4" rx="1.2" fill="#274060"/></svg></div>
-            <div class="m-marq" aria-hidden="true"><i></i><i></i><i></i></div>
-            <div class="m-row"><span class="m-ticket"></span><span class="m-ticket"></span><span class="m-ticket"></span></div>
-          </div>
+        <div class="shot">
+          <img src="images/home.png" width="1280" height="800" alt="The new Forever Summer home page. A big headline reads 'That long-summer feeling, on a hanger' next to a striped sunset illustration, with two pill buttons below.">
         </div>
-        <p class="note">Retro striped-sun hero · honest drop marquee ("when it's gone,
-        it's gone") · ticket-style cards that explain the weekly → limited → gone
-        rhythm · one hibiscus CTA.</p>
+        <p class="note">The real new home page. The striped sun, the drop story, and one
+        pink call to action.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="slide" aria-label="Key changes and reasons">
+<section class="slide" aria-label="More of the new site">
   <div class="wrap">
-    <p class="eyebrow">The changes, and why</p>
+    <p class="eyebrow">A closer look</p>
+    <h2>The new site, page by page.</h2>
+    <div class="gallery">
+      <figure>
+        <div class="shot"><img src="images/new.png" width="1280" height="800" alt="The New This Week page, headed 'Here Friday. Gone Sunday.' with three dashed ticket cards for this week's drop."></div>
+        <figcaption>"New this week" finally puts the drop on the shop's own site.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="images/visit.png" width="1280" height="800" alt="The Visit page with a hold-request form and a card showing the address, hours, phone and email."></div>
+        <figcaption>Visit page: ask us to hold a piece, with every detail in one card.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="images/mobile.png" width="375" height="740" alt="The home page on a phone, with the headline and sunset illustration stacked."></div>
+        <figcaption>Made for phones first.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="slide cream" aria-label="Changes and reasons">
+  <div class="wrap">
+    <p class="eyebrow">What changed, and why</p>
     <h2>"Here Friday. Gone Sunday."</h2>
     <ul class="changes">
-      <li><b>The drop, productized</b>
-        <p>A "New this week" page explains the weekly limited-drop model, bridges to
-        Instagram where drops go live, and offers a first-look email list.
-        <span class="why">Why: it's the shop's real buying model (sourced) — and no local competitor puts a drop cadence on the web. Real scarcity, honestly told, beats fake countdown timers.</span></p></li>
+      <li><b>The drop, front and centre</b>
+        <p>A whole page explains the weekly drop and links to Instagram, where it goes live.
+        <span class="why">Why: it's how the shop really buys. Real scarcity beats fake countdowns.</span></p></li>
       <li><b>A friendly fitting-room promise</b>
-        <p>"Try anything. Try it twice. Ask for another size out loud." Plus a hold-request
-        form that's honest about short, first-come holds.
-        <span class="why">Why: reviews flagged service inconsistency; the site now sets the standard publicly — and celebrates the staff shout-out review right beside it.</span></p></li>
+        <p>"Try anything. Try it twice. Ask for another size out loud."
+        <span class="why">Why: reviews flagged service. Now the standard is public, next to the staff praise.</span></p></li>
       <li><b>Found where people look</b>
-        <p>"45 Market St, The Paseo, Camana Bay — next to Starbucks," repeated consistently,
-        with structured data and a maps link.
-        <span class="why">Why: "George Town" framing hid the shop from Camana Bay searches; one wayfinding line ends the three competing landmark descriptions found in the audit.</span></p></li>
+        <p>"45 Market St, The Paseo, Camana Bay, next to Starbucks." Same words everywhere.
+        <span class="why">Why: "George Town" was hiding the shop from the searches that matter.</span></p></li>
       <li><b>FS Girls, kept and grown</b>
-        <p>The teen line keeps its own page — "first-job budgets welcome" — in the same
-        drop rhythm.
-        <span class="why">Why: teens/young adults are a stated target audience; it's also the argument for the owner's to-do of opening TikTok.</span></p></li>
-      <li><b>Affordability said out loud</b>
-        <p>Copy leans into "fashion you can actually afford" — the shop's own positioning —
-        rather than hiding price.
-        <span class="why">Why: in an import-duty economy, attainable pricing is a real differentiator, and it's the brand's own tagline.</span></p></li>
+        <p>The teen line keeps its own page, at pocket-money prices.
+        <span class="why">Why: teens are a core audience. It's also the case for opening TikTok.</span></p></li>
+      <li><b>Affordable, said out loud</b>
+        <p>The copy owns it: summer fashion you can actually afford.
+        <span class="why">Why: on a pricey island, that's the shop's biggest edge.</span></p></li>
     </ul>
   </div>
 </section>
 
-<section class="slide cream" aria-label="Design system">
+<section class="slide dusk on-dark" aria-label="Design and next steps">
   <div class="wrap">
-    <p class="eyebrow">The design system</p>
-    <h2>Built from Catherine's own words.</h2>
-    <p class="lede">The owner opened the shop to capture "that nostalgic feeling of long
-    summer days and nights filled with fun and freedom." The visual system is that
-    sentence, drawn:</p>
+    <p class="eyebrow">The look, and what's next</p>
+    <h2>Built from the owner's own words.</h2>
+    <p class="lede">Catherine opened the shop to capture "long summer days and nights
+    filled with fun and freedom." The sunset colors and the striped sun are that idea,
+    drawn.</p>
     <div class="chips" aria-label="Color tokens">
-      <span class="chip"><i style="background:var(--cream-50);border:1px solid var(--cream-300)"></i>Sun-bleached cream — field</span>
-      <span class="chip"><i style="background:var(--amber-500)"></i>Golden-hour amber — secondary</span>
-      <span class="chip"><i style="background:var(--dusk-700)"></i>Dusk blue — deep anchor</span>
-      <span class="chip"><i style="background:var(--hib-600)"></i>Hibiscus — CTAs only</span>
+      <span class="chip"><i style="background:var(--cream-50)"></i>Sun-bleached cream</span>
+      <span class="chip"><i style="background:var(--amber-500)"></i>Golden-hour amber</span>
+      <span class="chip"><i style="background:var(--dusk-700);outline:1px solid rgba(255,255,255,.4)"></i>Dusk blue</span>
+      <span class="chip"><i style="background:var(--hib-600)"></i>Hibiscus, buttons only</span>
     </div>
     <ul class="changes">
-      <li><b>A retro sunset signature</b><p>Striped sun arcs — part 70s postcard, part beach towel — carry the nostalgia brief in the logo mark, hero and favicon.</p></li>
-      <li><b>Warm, rounded, quick</b><p>Fraunces (soft editorial serif) over Karla, pill buttons and 10–18px corners: playful and youthful — deliberately the opposite of big-sister Sand Angels' sharp gallery look, so the family reads as a family, not clones.</p></li>
-      <li><b>Motion with manners</b><p>The drop marquee is the one moving element; it pauses entirely for visitors who prefer reduced motion.</p></li>
-    </ul>
-  </div>
-</section>
-
-<section class="slide dusk on-dark" aria-label="Quality and next steps">
-  <div class="wrap">
-    <p class="eyebrow">Proof &amp; next steps</p>
-    <h2>Measured, not vibes.</h2>
-    <ul class="changes">
-      <li><b>Accessibility</b><p>Every color pair passes WCAG AA (verified programmatically); axe reports zero critical or serious issues on all six pages; keyboard-operable, 44px+ touch targets.</p></li>
-      <li><b>Performance</b><p>One ~55&nbsp;KB HTML file with zero image requests — the striped sun is inline SVG. Instant on a phone outside Starbucks.</p></li>
-      <li><b>Honesty</b><p>Drop photo slots are labeled placeholders for the shop's own weekly photos; the single review quote is verbatim from Google, flagged for owner approval; conflicting hours are flagged, not guessed.</p></li>
-      <li><b>Owner to-dos</b><p>Confirm hours · supply logo &amp; drop photos · rename the Facebook page to "Forever Summer" · claim Google Business Profile · consider TikTok for FS Girls.</p></li>
+      <li><b>Tested</b><p>Passes accessibility checks on every page, loads as one small file, quick on any phone.</p></li>
+      <li><b>Honest</b><p>Drop photo spots are labeled placeholders until the shop sends its own weekly shots.</p></li>
+      <li><b>Owner to-dos</b><p>Confirm hours, send the logo and photos, rename the Facebook page to "Forever Summer," claim the Google listing.</p></li>
     </ul>
     <a class="btn" href="https://foundrylabsky.github.io/forever-summer-website/">Open the live site</a>
-    <p class="src">Full pipeline: <a style="color:#fff" href="https://github.com/FoundryLabsKy/forever-summer-website">github.com/FoundryLabsKy/forever-summer-website</a> — audit, plan, QA log and source.</p>
   </div>
 </section>
 
