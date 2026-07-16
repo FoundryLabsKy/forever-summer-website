@@ -11,7 +11,7 @@ Fonts). All artwork (striped-sun hero, marquee, tickets) is inline SVG/CSS — z
 image requests.
 
 **Run it:** open `index.html` in any browser, or host it on any static host.
-This repo auto-deploys `main` to GitHub Pages via `.github/workflows/pages.yml`:
+GitHub Pages deploys `main` automatically on every push (deploy-from-branch):
 **https://foundrylabsky.github.io/forever-summer-website/**
 
 **Pages (hash routes):** `#/home`, `#/new`, `#/shop`, `#/fs-girls`, `#/about`,
