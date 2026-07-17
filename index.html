@@ -154,8 +154,11 @@ nav.primary a[aria-current="page"]{color:var(--cream-50);background:var(--dusk-7
 .hero-sun{position:relative;min-height:20rem;display:flex;align-items:flex-end;justify-content:center}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:var(--s-2);margin-top:var(--s-3)}
 .hero-meta{margin-top:var(--s-3);color:var(--ink-500);font-size:.9375rem}
-@media (max-width:56em){.hero .wrap{grid-template-columns:1fr;padding-top:var(--s-5)}
-  .hero-sun{min-height:13rem}}
+@media (max-width:56em){
+  .hero .wrap{grid-template-columns:1fr;padding-top:var(--s-5);padding-bottom:var(--s-4);gap:var(--s-3)}
+  .hero-sun{min-height:auto;justify-content:center}
+  .hero-sun svg{max-width:270px}
+}
 
 /* marquee strip — honest drop phrases */
 .marquee{background:var(--dusk-800);color:var(--cream-100);overflow:hidden;
@@ -164,7 +167,10 @@ nav.primary a[aria-current="page"]{color:var(--cream-50);background:var(--dusk-7
   animation:slide 28s linear infinite;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.875rem}
 .marquee .track span::after{content:"☀";margin-left:3rem;color:var(--amber-400)}
 @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+@media (prefers-reduced-motion:reduce){
+  .marquee .track{animation:none;width:auto;white-space:normal;flex-wrap:wrap;
+    justify-content:center;gap:.4rem 2rem}
+}
 
 section.band{padding:var(--s-7) 0}
 section.band.tight{padding:var(--s-6) 0}
@@ -222,7 +228,10 @@ section.band.tight{padding:var(--s-6) 0}
 .visit-card dd{margin:0;font-size:1.25rem}
 .visit-card dd.small{font-size:.9375rem;color:var(--ink-600)}
 .actions{display:flex;flex-direction:column;gap:var(--s-2);margin-top:var(--s-4)}
-@media (max-width:56em){.visit-grid{grid-template-columns:1fr;gap:var(--s-4)}}
+@media (max-width:56em){.visit-grid{grid-template-columns:minmax(0,1fr);gap:var(--s-4)}}
+.visit-grid>*{min-width:0}
+.field input,.field select,.field textarea{min-width:0}
+.visit-card dd,.visit-card a{overflow-wrap:anywhere}
 
 /* form */
 form.signup{display:grid;gap:var(--s-3);max-width:32rem}
@@ -252,6 +261,12 @@ footer.site li a{display:inline-flex;min-height:32px;align-items:center}
   font-size:.8125rem;color:var(--cream-300)}
 @media (max-width:56em){footer.site .cols{grid-template-columns:1fr;gap:var(--s-3)}}
 
+@media (max-width:56em){
+  section.band{padding:var(--s-6) 0}
+  section.band.tight{padding:var(--s-5) 0}
+  .page-head{padding-top:var(--s-5)}
+  .row2 .art figcaption{font-size:.66rem;letter-spacing:.03em}
+}
 main [data-route]{display:none}
 main [data-route].active{display:block}
 .page-head{padding:var(--s-6) 0 var(--s-2)}
@@ -734,9 +749,11 @@ menuBtn.addEventListener("click", ()=>{
   menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
 });
 
-/* ---------- marquee: duplicate track content once for a seamless loop ---------- */
+/* ---------- marquee: duplicate content for a seamless loop (skip when motion is off) ---------- */
 const track = document.getElementById("marquee-track");
-track.innerHTML += track.innerHTML;
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
+  track.innerHTML += track.innerHTML;
+}
 
 /* ---------- reveals ---------- */
 let io = null;
