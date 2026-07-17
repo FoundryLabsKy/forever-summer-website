@@ -36,8 +36,11 @@ boutiques, Instagram handle, and the quoted Google review (Gabby shout-out).
    story said 10am–7pm. Confirm and align everywhere.
 2. **Logo & brand colors.** The striped-sun mark and amber/dusk/hibiscus palette are
    proposed from the brand concept, not the official logo. Swap in the real logo.
-3. **Photography.** All image slots are clearly-labeled placeholder panels — replace
-   with the shop's own drop/interior photos and update alt text.
+3. **Photography.** Location/mood slots (home, FS Girls) now use credited, openly
+   licensed Wikimedia Commons photos of Camana Bay and Seven Mile Beach as stand-ins;
+   merchandise slots (In the shop, drop tickets) and the owner photo remain labeled
+   placeholders on purpose. Replace all of them with the shop's own photos, update the
+   alt text, and remove the footer photo-credit line when done.
 4. **Review quote.** The Gabby quote is from a public Google review, attributed as
    such; get owner approval and full attribution.
 5. **Holds policy.** The "ask us to hold a piece" flow assumes short first-come

@@ -190,6 +190,8 @@ section.band.tight{padding:var(--s-6) 0}
   padding:var(--s-4) 0}
 .row2.rev>.txt{order:2}
 .row2 h2{font-size:1.5rem;margin-bottom:var(--s-2)}
+.art img.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art figcaption a{color:inherit}
 .row2 .art{border-radius:var(--r-3);min-height:16rem;box-shadow:var(--shadow-1);
   position:relative;overflow:hidden;display:flex;align-items:flex-end}
 .row2 .art figcaption{position:relative;margin:var(--s-2);padding:.3rem .7rem;
@@ -197,6 +199,8 @@ section.band.tight{padding:var(--s-6) 0}
   letter-spacing:.06em;text-transform:uppercase;border-radius:var(--r-pill)}
 @media (max-width:56em){.row2{grid-template-columns:1fr;gap:var(--s-3)}.row2.rev>.txt{order:0}
   .row2 h2{font-size:1.5rem;margin-bottom:var(--s-2)}
+.art img.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art figcaption a{color:inherit}
 .row2 .art{min-height:12rem}}
 
 /* pull quote */
@@ -352,7 +356,10 @@ main [data-route].active{display:block}
         <p><a class="btn-link" href="#/about">Read the story</a></p>
       </div>
       <figure class="art" style="background:linear-gradient(160deg,var(--amber-200),var(--amber-400))">
-        <figcaption>Placeholder — shop interior photo</figcaption>
+        <img class="ph" loading="lazy" onerror="this.remove()"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Playa%20de%20Gran%20Caim%C3%A1n-Islas%20Caim%C3%A1n01.JPG?width=1200"
+          alt="Seven Mile Beach on Grand Cayman: white sand, clear turquoise water and a bright sky.">
+        <figcaption>Seven Mile Beach · <a href="https://commons.wikimedia.org/wiki/File:Playa_de_Gran_Caim%C3%A1n-Islas_Caim%C3%A1n01.JPG" rel="noopener">photo: Wikimedia Commons</a></figcaption>
       </figure>
     </div>
   </div>
@@ -378,7 +385,10 @@ main [data-route].active{display:block}
         </div>
       </div>
       <figure class="art" style="background:linear-gradient(160deg,var(--cream-200),var(--amber-200))">
-        <figcaption>Placeholder — storefront photo, the Paseo</figcaption>
+        <img class="ph" loading="lazy" onerror="this.remove()"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Camana%20Bay%20(5313249503).jpg?width=1200"
+          alt="The Camana Bay waterfront in Grand Cayman, the town centre where Forever Summer is located.">
+        <figcaption>Camana Bay · <a href="https://commons.wikimedia.org/wiki/File:Camana_Bay_(5313249503).jpg" rel="noopener">photo: Wikimedia Commons</a></figcaption>
       </figure>
     </div>
   </div>
@@ -522,7 +532,10 @@ main [data-route].active{display:block}
         </div>
       </div>
       <figure class="art" style="background:linear-gradient(160deg,var(--amber-100),var(--hib-600) 140%)">
-        <figcaption>Placeholder — FS Girls photo</figcaption>
+        <img class="ph" loading="lazy" onerror="this.remove()"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Resorts%20on%20Seven%20Mile%20Beach%2C%20Grand%20Cayman.jpg?width=1200"
+          alt="Seven Mile Beach with its resorts in the background, minutes from the shop.">
+        <figcaption>Seven Mile Beach · <a href="https://commons.wikimedia.org/wiki/File:Resorts_on_Seven_Mile_Beach,_Grand_Cayman.jpg" rel="noopener">photo: Wikimedia Commons</a></figcaption>
       </figure>
     </div>
   </div>
@@ -670,7 +683,9 @@ main [data-route].active{display:block}
       </div>
     </div>
     <p class="fine">© 2026 Forever Summer, Camana Bay, Grand Cayman. Review quoted is from
-    a public Google review of the shop. Mon–Sat 10am–6pm.</p>
+    a public Google review of the shop. Mon–Sat 10am–6pm. Location photos are licensed
+    from Wikimedia Commons and stand in until the shop's own photography is added; each
+    is credited where it appears.</p>
   </div>
 </footer>
 
